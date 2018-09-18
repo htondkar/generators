@@ -52,3 +52,16 @@ function coroutine(generator) {
   })
 }
 ```
+
+example usage:
+```
+const get = coroutine(function* getData() {
+  const otherData = yield fetchOtherData()
+  console.log('fetched other data: ', otherData)
+  
+  const users = yield fetchUsers(otherData)
+  console.log('fetched users: ', users)
+  
+  return users
+}).then(data => console.log(data))
+```
