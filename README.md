@@ -1,4 +1,4 @@
-# generators
+# Generators
 Snippets about generators
 ---
 
@@ -15,8 +15,9 @@ function* getNumbers() {
 Usage: 
 
 ```
+// looping with for-of syntax
 for (let i of getNumbers()) {
-  console.log(i) // 1 5 10
+  console.log(i)
 }
 
 // destructering
