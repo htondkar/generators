@@ -97,6 +97,7 @@ const [[key1, value1], ...] = {a: 1, ...}
 The yield* operator lets you call another generator from within a generator.
 yield* considers end-of-iteration values:
 
+```
 function* genFuncWithReturn() {
     yield 'a';
     yield 'b';
@@ -107,4 +108,6 @@ function* logReturned(genObj) {
     let result = yield* genObj;
     console.log(result); // 'The result'
 }
+```
+
 ---
