@@ -2,6 +2,14 @@
 Snippets about generators
 ---
 
+General notes: 
+When using a generator as an observer, it is important to note that the only purpose of the first invocation of next() is to start the observer. Therefore, you can’t send input via the first next() – you even get an error if you do
+
+yield binds very loosely, so that we don’t have to put its operand in parentheses:
+`yield a + b + c` is the same as `yield (a + b + c)`
+
+---
+
 how to use generators:
 
 ```
