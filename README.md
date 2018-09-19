@@ -86,4 +86,8 @@ Usage:
 for (const [key, value] of {a: 1, b: 2}) {
   console.log(key, value) // a,1 b,2
 }
+
+[...{a: 1, b: 2}]
+
+const [[key1, value1], ...] = {a: 1, ...}
 ```
