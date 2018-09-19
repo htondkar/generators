@@ -65,3 +65,25 @@ const get = coroutine(function* getData() {
   return users
 }).then(data => console.log(data))
 ```
+
+
+---
+
+iterate over objects in a for-of loop
+
+```
+Object.prototype[Symbol.iterator] = function* () {
+  const propKeys = Reflect.ownKeys(this);
+  for (const propKey of propKeys) {
+      yield [propKey, this[propKey]];
+  }
+}
+```
+
+Usage:
+
+```
+for (const [key, value] of {a: 1, b: 2}) {
+  console.log(key, value) // a,1 b,2
+}
+```
